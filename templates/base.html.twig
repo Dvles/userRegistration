@@ -12,6 +12,13 @@
         {% endblock %}
     </head>
     <body>
+        <nav>
+            <a href="">option 1</a>
+            <a href="">option 1</a>
+            {% if condition %}
+                <a href="">option Uniquement Admin</a>
+            {% endblock %}
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

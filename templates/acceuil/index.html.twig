@@ -5,6 +5,10 @@
 {% block body %}
 Bienvenu au site {{ app.user.email}}
 <br>
+
+{{ dump(app.user.roles)}}
 test: 
 <a href=" {{ path ('app_logout')}}"> logout<a/>
+
+con
 {% endblock %}
