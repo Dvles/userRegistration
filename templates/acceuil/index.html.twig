@@ -3,12 +3,12 @@
 {% block title %}Hello AcceuilController!{% endblock %}
 
 {% block body %}
-Bienvenu au site {{ app.user.email}}
+ Bienvenu au site
+{# Bienvenu au site {{ app.user.email}} #}
 <br>
 
-{{ dump(app.user.roles)}}
-test: 
-<a href=" {{ path ('app_logout')}}"> logout<a/>
+{# {{ dump(app.user.roles)}} #}
+ 
 
-con
+
 {% endblock %}

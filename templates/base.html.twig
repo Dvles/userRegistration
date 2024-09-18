@@ -14,11 +14,16 @@
     <body>
         <nav>
             <a href="">option 1</a>
-            <a href="">option 1</a>
-            {% if condition %}
-                <a href="">option Uniquement Admin</a>
-            {% endblock %}
+            {% if app.user %}
+                <a href=" {{ path ('app_logout')}}">logout<a/>
+            {% else %}
+                
+                {# <a href="">option Uniquement Admin</a> #}
+            <a href=" {{ path ('app_login')}}">login<a/>
+            {% endif %}
+
         </nav>
+        <br>
         {% block body %}{% endblock %}
     </body>
 </html>
