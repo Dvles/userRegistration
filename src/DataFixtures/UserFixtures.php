@@ -12,12 +12,23 @@ class UserFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        $user = new User();
-        $user->setEmail("user@gmail.com");
-        $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
-        $user->setPassword("0000");
-        // for ($i = 0; $i < 5)
-        $manager->persist($user);
+        for ($i=0; $i<5; $i++){
+            $user = new User();
+            $user->setEmail("user" . $i . "@gmail.com");
+            $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
+            $user->setPassword("0000");
+            $manager->persist($user);
+        }
+        
+
+        for ($i=0; $i<5; $i++){
+            $user = new User();
+            $user->setEmail("admin" . $i . "@gmail.com");
+            $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
+            $user->setPassword("0000");
+            $manager->persist($user);
+        }
+        
         $manager->flush();
     }
 }
