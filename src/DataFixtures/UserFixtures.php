@@ -24,6 +24,8 @@ class UserFixtures extends Fixture
         for ($i = 0; $i < 5; $i++) {
             $user = new User();
             $user->setEmail("user" . $i . "@gmail.com");
+            $user->setNom("nom" . $i);
+            $user->setDateNaissance(new \DateTime('2000-01-01'));
             $user->setRoles(['ROLE_USER']);
 
             // Hash the password using injected hasher
@@ -37,6 +39,8 @@ class UserFixtures extends Fixture
             $admin = new User();
             $admin->setEmail("admin" . $i . "@gmail.com");
             $admin->setRoles(['ROLE_ADMIN']);
+            $admin->setNom("nom" . $i);
+            $admin->setDateNaissance(new \DateTime('2000-01-01'));
 
             // Hash the password for admins
             $hashedPassword = $this->passwordHasher->hashPassword($admin, '0000');
