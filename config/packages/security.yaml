@@ -20,7 +20,7 @@ security:
                 login_path: app_login
                 check_path: app_login
                 enable_csrf: true
-                default_target_path: accueil # name de la route à charger
+                default_target_path: acceuil # name de la route à charger
             logout:
                 path: app_logout
                 # where to redirect after logout
