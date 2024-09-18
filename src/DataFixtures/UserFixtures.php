@@ -36,7 +36,7 @@ class UserFixtures extends Fixture
         for ($i = 0; $i < 5; $i++) {
             $admin = new User();
             $admin->setEmail("admin" . $i . "@gmail.com");
-            $admin->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
+            $admin->setRoles(['ROLE_ADMIN']);
 
             // Hash the password for admins
             $hashedPassword = $this->passwordHasher->hashPassword($admin, '0000');
