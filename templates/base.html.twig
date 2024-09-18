@@ -12,26 +12,8 @@
         {% endblock %}
     </head>
     <body>
-        <nav>
-            {# liens sans connexion #}
-            <a href="">option 1</a>
-            <a href="">option 2</a>
-            
-            {# liens pour l'admin #}
-            {% if is_granted('ROLE_ADMIN') %}
-                <a href="">option 3</a>
-                <a href="">option 4</a>
-            {% endif %}
 
-            {# liens pour tout user#}
-            {% if app.user %}
-                <a href=" {{ path ('app_logout')}} ">logout<a/>
-            {% else %}
-                <a href=" {{ path ('app_login')}} ">login<a/>
-            {% endif %}
-
-        </nav>
-        <br>
+        {% include "/includes/nav.html.twig" %}
         {% block body %}{% endblock %}
     </body>
 </html>
