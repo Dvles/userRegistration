@@ -40,7 +40,7 @@ class UserFixtures extends Fixture
             $admin->setEmail("admin" . $i . "@gmail.com");
             $admin->setRoles(['ROLE_ADMIN']);
             $admin->setNom("nom" . $i);
-            $admin->setDateNaissance(new \DateTime('2000-01-01'));
+            $admin->setDateNaissance(new \DateTime('0000-00-00'));
 
             // Hash the password for admins
             $hashedPassword = $this->passwordHasher->hashPassword($admin, '0000');
