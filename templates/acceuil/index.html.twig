@@ -3,5 +3,8 @@
 {% block title %}Hello AcceuilController!{% endblock %}
 
 {% block body %}
-Bienvenu au site
+Bienvenu au site {{ app.user.email}}
+<br>
+test: 
+<a href=" {{ path ('app_logout')}}"> logout<a/>
 {% endblock %}
